@@ -1,183 +1,133 @@
-<!DOCTYPE html>
-<html>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-    <style>
-        #main:any-link {
-            color: rgb(67, 75, 75);
-            text-decoration: none;
+{% extends "layouts.html" %}
 
-        }
-        #header {
-            line-height: 90px;
-        }
-        th {
-            border-bottom-width: 1px solid black;
-            padding-right: 10px;
-        }
-    </style>
-    <head>
-        <title>My four year plan for college</title>
-    </head>
-    <div>
-        <div class="container-fluid">
-            <div class="row">
-                <h1 class="col">
-                    <a href = "index.html" id = "main">Ali Khan</a>
-                </h1>
-                <h4 class="text-right font-weight-light">
-                    <a href="contact.html" id="main">Contact!</a>
-                </h4>
-            </div>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="biography.html">Biography</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="4year.html">four year plan</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Professional.html">Professional</a>
-                  </li>
-                <li class="nav-item">
-                    <a class = "nav-link" href="pictures.html">pictures</a>
-                </li>
-              </ul>
-            </div>
-        </nav>
-        <h1 id="header" class="text-center font-weight-light">
-            Four Year Plan at Rutgers University - New Brunswick
-        </h1>
-        <div class="container">
-            <div class="row">
-                <h3>
-                    Freshman year
-                </h3>
-            </div>
-            <div class="row">
-                <table class="table table-striped col">
-                    <tr>
-                    <th>Fall</th>
-                    <th>Grade</th>
-                    </tr>
-                    <tr>
-                    <td>Honors Calculus 1</td>
-                    <td>B+</td>
-                    </tr>
-                    <tr>
-                        <td>Arabic 1</td>
-                        <td>A</td>
-                    </tr>
-                    <tr>
-                        <td>Statistics 1</td>
-                        <td>A</td>
-                    </tr>
-                    <tr>
-                        <td>Exposition and Argument</td>
-                        <td>B</td>
-                    </tr>
-                    <tr>
-                        <td>Honors College Forum</td>
-                        <td>A</td>
-                    </tr>
-                </table>
-                <table class="table table-striped col">
-                    <tr>
-                        <th>Spring</th>
-                        <th>Grade</th>
-                    </tr>
-                    <tr>
-                        <td>Calculus 2</td>
-                        <td>B+</td>
-                    </tr>
-                    <tr>
-                        <td>Arabic 2</td>
-                        <td>B</td>
-                    </tr>
-                    <tr>
-                        <td>Gods, Myths, and Religions in a Secular Age</td>
-                        <td>A</td>
-                    </tr>
-                    <tr>
-                        <td>Intro to Computer Science</td>
-                        <td>A</td>
-                    </tr>
-                    <tr>
-                        <td>Byrne Seminar</td>
-                        <td>A</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="alert alert-warning row" role="alert">
-                *Because of the Coronavirus pandemic of 2020 some of my grades in the Spring semester may appear as Passing
-            </div>
-            <div class = "row justify-content-end">
-                <b>Cumultive GPA: </b> 3.79
-            </div>
-            <div class="row">
-                <h3>
-                    Sophomore year
-                </h3>
-            </div>
-            <div class="row">
-                <table class="table table-striped col">
-                    <tr>
-                    <th>Fall</th>
-                    <th>Grade</th>
-                    </tr>
-                    <tr>
-                    <td>Data Structures</td>
-                    <td>N/A</td>
-                    </tr>
-                    <tr>
-                        <td>Intro to Financial Accounting</td>
-                        <td>N/A</td>
-                    </tr>
-                    <tr>
-                        <td>Intro to Discrete Structures</td>
-                        <td>N/A</td>
-                    </tr>
-                    <tr>
-                        <td>Intermediate Micro-Analysis</td>
-                        <td>N/A</td>
-                    </tr>
-                    <tr>
-                        <td>Intermediate Macro-Analysis</td>
-                        <td>N/A</td>
-                    </tr>
-                </table>
-                <table class="table table-striped col">
-                    <tr>
-                        <th>Spring</th>
-                        <th>Grade</th>
-                    </tr>
-                    <tr>
-                        <td>Computer Architecture</td>
-                        <td>N/A</td>
-                    </tr>
-                    <tr>
-                        <td>Intro to Discrete Structures</td>
-                        <td>N/A</td>
-                    </tr>
-                    <tr>
-                        <td>Probability Theory</td>
-                        <td>N/A</td>
-                    </tr>
-                    <tr>
-                        <td>Intro to Linear Algebra</td>
-                        <td>N/A</td>
-                    </tr>
-                    <tr>
-                        <td>Interdisclipinary Honors Seminar</td>
-                        <td>N/A</td>
-                    </tr>
-                </table>
-            </div>
+{%block body%}
+    <h1 id="header" class="text-center font-weight-light">
+        Four Year Plan at Rutgers University - New Brunswick
+    </h1>
+<div class="container">
+    <div class="row">
+        <h3>
+            Freshman year
+        </h3>
     </div>
-</html>
+    <div class="row">
+        <table class="table table-striped col">
+            <tr>
+            <th>Fall</th>
+            <th>Grade</th>
+            </tr>
+            <tr>
+            <td>Honors Calculus 1</td>
+            <td>B+</td>
+            </tr>
+            <tr>
+                <td>Arabic 1</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Statistics 1</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Exposition and Argument</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>Honors College Forum</td>
+                <td>A</td>
+            </tr>
+        </table>
+        <table class="table table-striped col">
+            <tr>
+                <th>Spring</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>Calculus 2</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <td>Arabic 2</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>Gods, Myths, and Religions in a Secular Age</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Intro to Computer Science</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Byrne Seminar</td>
+                <td>A</td>
+            </tr>
+        </table>
+    </div>
+    <div class="alert alert-warning row" role="alert">
+        *Because of the Coronavirus pandemic of 2020 some of my grades in the Spring semester may appear as Passing
+    </div>
+    <div class = "row justify-content-end">
+        <b>Cumultive GPA: </b> 3.79
+    </div>
+    <div class="row">
+        <h3>
+            Sophomore year
+        </h3>
+    </div>
+    <div class="row">
+        <table class="table table-striped col">
+            <tr>
+            <th>Fall</th>
+            <th>Grade</th>
+            </tr>
+            <tr>
+            <td>Data Structures</td>
+            <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Intro to Financial Accounting</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Intro to Discrete Structures</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Intermediate Micro-Analysis</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Intermediate Macro-Analysis</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+        <table class="table table-striped col">
+            <tr>
+                <th>Spring</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>Computer Architecture</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Intro to Discrete Structures</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Probability Theory</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Intro to Linear Algebra</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Interdisclipinary Honors Seminar</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{%endblock%}
