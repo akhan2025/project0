@@ -10,6 +10,10 @@ def index():
 def four_year():
     return render_template("4year.html")
 
+@app.route("/professional")
+def professional():
+    return render_template("professional.html")
+
 @app.route('/contact')
 def contact():
     return render_template("contact.html")
