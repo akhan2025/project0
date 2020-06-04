@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
+from flask_mail import Mail, Message
 
 app = Flask(__name__, static_folder='D:\intro to CS\project0\static')
+mail = Mail(app)
 
 @app.route("/")
 def index():
@@ -20,5 +22,6 @@ def contact():
 
 @app.route("/thankyou", methods=['GET', 'POST'])
 def thank_you():
+    msg = Message(request.form.get("message"), sender=(request.form.get("name"), "ahk21170@gmail.com"), recipients=["ahk21170@gmail.com"])
     name = request.form.get("name")
     return render_template("thankyou.html", name=name)
